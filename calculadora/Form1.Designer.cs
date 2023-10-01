@@ -49,7 +49,6 @@
             txtPN.Size = new Size(212, 21);
             txtPN.TabIndex = 0;
             txtPN.Text = "Introduzca el primer numero:";
-            txtPN.Click += label1_Click;
             // 
             // txtSN
             // 

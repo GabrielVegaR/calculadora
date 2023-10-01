@@ -14,17 +14,14 @@ namespace calculadora
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        Calculadora calculadora = new Calculadora();
 
         private void btnSuma_Click(object sender, EventArgs e)
         {
             double a = Convert.ToDouble(tbPrimerNum.Text);
             double b = Convert.ToDouble(tbSegundoNum.Text);
 
-            double r = a + b;
+            double r = calculadora.Suma(a, b);
 
             tbResultado.Text = r.ToString(r % 1 == 0 ? "G" : "F6");
 
@@ -35,7 +32,7 @@ namespace calculadora
             double a = Convert.ToDouble(tbPrimerNum.Text);
             double b = Convert.ToDouble(tbSegundoNum.Text);
 
-            double r = a - b;
+            double r = calculadora.Resta(a, b);
 
             tbResultado.Text = r.ToString(r % 1 == 0 ? "G" : "F6");
         }
@@ -45,7 +42,7 @@ namespace calculadora
             double a = Convert.ToDouble(tbPrimerNum.Text);
             double b = Convert.ToDouble(tbSegundoNum.Text);
 
-            double r = a * b;
+            double r = calculadora.Multiplicacion(a, b);
 
             tbResultado.Text = r.ToString(r % 1 == 0 ? "G" : "F6");
         }
@@ -55,7 +52,7 @@ namespace calculadora
             double a = Convert.ToDouble(tbPrimerNum.Text);
             double b = Convert.ToDouble(tbSegundoNum.Text);
 
-            double r = a / b;
+            double r = calculadora.Division(a, b);
 
             tbResultado.Text = r.ToString(r % 1 == 0 ? "G" : "F6");
         }
